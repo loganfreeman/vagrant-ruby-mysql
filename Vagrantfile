@@ -27,6 +27,8 @@ Vagrant.configure(2) do |config|
   # firewall: open port 3000 for Rails HTTP
   config.vm.provision "shell", path: 'scripts/firewall.sh'
 
+  config.vm.provision "shell", path: 'scripts/general.sh'
+
   # install RVM, Ruby, and Rails
   config.vm.provision "shell", path: 'scripts/ruby.sh', privileged: false
 
