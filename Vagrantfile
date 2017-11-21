@@ -29,6 +29,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", path: 'scripts/general.sh'
 
+  config.vm.provision "shell", path: 'scripts/user.sh'
+
   # install RVM, Ruby, and Rails
   config.vm.provision "shell", path: 'scripts/ruby.sh', privileged: false
 
